@@ -11,7 +11,7 @@ const nunitoSans = Nunito_Sans({
   variable: "--font-nunito-sans",
   subsets: ["latin"],
 });
-
+// メタデータ
 export const metadata: Metadata = {
   title: "毒見部 公式サイト｜Toxseen Official",
   description: "個人開発者のポートフォリオサイトです。",
