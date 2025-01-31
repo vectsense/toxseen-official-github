@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Murecho, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import DynamicBackground from "@/components/motionWrapper/dynamicBackground";
 
 const murecho = Murecho({
   variable: "--font-murecho",
@@ -27,7 +28,10 @@ export default function RootLayout({
       <body
         className={`${murecho.variable} ${nunitoSans.variable} antialiased`}
       >
-        {children}
+        {/* 動的背景を追加 */}
+        <DynamicBackground />
+        {/* 子要素を表示 */}
+        <div className="relative z-10 min-h-screen">{children}</div>
       </body>
     </html>
   );
