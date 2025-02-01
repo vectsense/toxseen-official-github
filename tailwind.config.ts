@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },backgroundImage: {
+        'custom-radial': "radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%)",
       },
     },
   },
