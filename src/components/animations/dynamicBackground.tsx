@@ -1,3 +1,4 @@
+// Copyright (c) 2024 21st.dev
 "use client";
 import { motion } from "framer-motion";
 import React, { useEffect, useRef, useMemo } from "react";
@@ -65,7 +66,7 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
   }, [gradientColors, gradientStops, initialStartingGap]);
 
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden">
+    <div className="absolute inset-0 z-10 overflow-hidden">
       {/* Add fade-in animation */}
       <motion.div
         key="dynamic-background"

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Murecho, Nunito_Sans } from "next/font/google";
 import "./globals.css";
-import DynamicBackground from "@/components/motionWrapper/dynamicBackground";
+import DynamicBackground from "@/components/animations/dynamicBackground";
+// import NeonIsometricMaze from "@/components/animations/neonIsometricMaze";
 
 const murecho = Murecho({
   variable: "--font-murecho",
@@ -33,6 +34,7 @@ export default function RootLayout({
         {/* 子要素を表示 */}
         <div className="relative z-10 min-h-screen">{children}</div>
       </body>
+
     </html>
   );
 }
