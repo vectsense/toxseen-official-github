@@ -10,7 +10,7 @@ interface DynamicBackgroundProps {
 
 const MIN_STARTING_GAP = 70;
 const MAX_STARTING_GAP = 150;
-const ANIMATION_SPEED = 0.01;
+const ANIMATION_SPEED = 0.005;
 
 const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
   startingGap: initialStartingGap = MIN_STARTING_GAP,
