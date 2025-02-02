@@ -8,28 +8,34 @@ interface DynamicBackgroundProps {
   gradientStops?: number[];
 }
 
-const MIN_STARTING_GAP = 90;
+const MIN_STARTING_GAP = 70;
 const MAX_STARTING_GAP = 150;
-const ANIMATION_SPEED = 0.08;
+const ANIMATION_SPEED = 0.01;
 
 const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
   startingGap: initialStartingGap = MIN_STARTING_GAP,
   gradientColors: externalGradientColors = [
     "#2979FF",
-    "#FF80AB",
-    "#11e59c",
-    "#FFD600",
-    "#00E676",
-    "#3D5AFE",
-    "#111669",
+    "#DB5692",
+    "#5BECF1",
+    "#F2CB05",
+    "#5BECF1",
+    "#7BE5B2",
+    "#DB5692",
   ],
-  gradientStops: externalGradientStops = [35, 50, 60, 70, 80, 90, 100],
+  gradientStops: externalGradientStops = [35, 55, 60, 70, 85, 100, 110],
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   // Memoize gradientColors and gradientStops
-  const gradientColors = useMemo(() => externalGradientColors, [externalGradientColors]);
-  const gradientStops = useMemo(() => externalGradientStops, [externalGradientStops]);
+  const gradientColors = useMemo(
+    () => externalGradientColors,
+    [externalGradientColors]
+  );
+  const gradientStops = useMemo(
+    () => externalGradientStops,
+    [externalGradientStops]
+  );
 
   useEffect(() => {
     let animationFrame: number;
@@ -63,10 +69,10 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
       {/* Add fade-in animation */}
       <motion.div
         key="dynamic-background"
-        initial={{ opacity: 0, }} // Start with 0 opacity
+        initial={{ opacity: 0 }} // Start with 0 opacity
         animate={{
-          opacity: 1, // Fade in to full opacity
-          transition: { duration: 10, ease: [0.25, 0.1, 0.25, 1] }, // Smooth transition
+          opacity: 2, // Fade in to full opacity
+          transition: { duration: 9, ease: [0.25, 0.1, 0.25, 1] }, // Smooth transition
         }}
         className="absolute inset-0 overflow-hidden"
       >
