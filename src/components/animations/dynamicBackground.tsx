@@ -11,7 +11,7 @@ interface DynamicBackgroundProps {
 
 const MIN_STARTING_GAP = 70;
 const MAX_STARTING_GAP = 150;
-const ANIMATION_SPEED = 0.005;
+const ANIMATION_SPEED = 0.01;
 
 const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
   startingGap: initialStartingGap = MIN_STARTING_GAP,
@@ -66,7 +66,7 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
   }, [gradientColors, gradientStops, initialStartingGap]);
 
   return (
-    <div className="absolute inset-0 z-10 overflow-hidden">
+    <div className="absolute inset-0 overflow-hidden">
       {/* Add fade-in animation */}
       <motion.div
         key="dynamic-background"
@@ -81,7 +81,7 @@ const DynamicBackground: React.FC<DynamicBackgroundProps> = ({
           ref={containerRef}
           className="absolute inset-0 transition-transform [mask-image:radial-gradient(ellipse_at_top,transparent_80%,black_84%),radial-gradient(ellipse_at_bottom,transparent_70%,black_96%)]"
         />
-        <div className="h-full w-full z-[1] [background-image:repeating-linear-gradient(180deg,#00ace4_0%,#11e59c_4px,transparent_1px,transparent_0.13%)] opacity-10" />
+        <div className="h-full w-full  [background-image:repeating-linear-gradient(180deg,#00ace4_0%,#11e59c_4px,transparent_6px,transparent_0.13%)] opacity-10 mix-blend-color-dodge" />
       </motion.div>
     </div>
   );

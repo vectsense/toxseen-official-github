@@ -7,7 +7,7 @@ export default function NotFoundSvg() {
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 362 145"
-      className="z-[-10] opacity-20 absolute top-0 left-0 mt-7"
+      className="z-[-20] opacity-20 absolute top-0 left-0 mt-7"
       initial={{ opacity: 0 }}
       animate={{ opacity: 0.2 }}
       transition={{ duration: 2, ease: "easeInOut" }}

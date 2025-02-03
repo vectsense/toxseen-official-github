@@ -1,4 +1,6 @@
 // app/test1/page.tsx
+"use client";
+import {Button, ButtonGroup} from "@heroui/button";
 import Link from "next/link";
 
 export default function Test1Page() {
@@ -12,6 +14,12 @@ export default function Test1Page() {
       >
         ホームに戻る
       </Link>
+      <ButtonGroup>
+        <Button>ボタン1</Button>
+        <Button>ボタン2</Button>
+        <Button>ボタン3</Button>
+      </ButtonGroup>
     </div>
+
   );
 }
